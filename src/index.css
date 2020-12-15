@@ -1,5 +1,5 @@
 body {
-    background-color: #fc0;
+    background-color: rgb(158, 158, 158);
     padding: 20px;
     margin: 0;
 }
@@ -7,7 +7,7 @@ h1, h2, li, p, ul {
     font-family: Helvetica,Arial,sans-serif;
 }
 ul.header {
-    background-color:#111;
+    background-color:rgb(105,196,153);
     padding: 0;
 }
     ul.header li {
@@ -23,7 +23,7 @@ ul.header {
             display: inline-block;
             }
 .content {
-    background-color: #fff;
+    background-color: rgb(239,29,38);
     padding:20px;
 }
     .content h2 {
@@ -34,5 +34,73 @@ ul.header {
         margin-bottom: 10px;
     }
     .active {
-    background-color: #09f;
+    background-color: rgb(0, 0, 0);
+}
+.content {
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    padding:0px;
+}
+    .content h2 {
+        padding: 0;
+        margin: 0;
+}
+    .content li {
+        margin-bottom: 10px;
+    }
+    .header  :active {
+        background-color: rgb(0, 0, 0);
+}
+.articles
+{
+    display: flex;
+}
+
+.articles_link {
+    background-color: aqua;
+    width: 423px;
+}
+    .articles_link li
+    {
+        list-style-type: none;
+        height: 83px;
+        text-align: center;
+    }
+        .articles_link a {
+                display: inline-block;
+                text-decoration: none;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                margin: 15px 25px;
+                padding: 15px 20px;
+                font-size: 20px;
+                font-weight: bold;
+                font-family: 'Montserrat', sans-serif;
+                transition: 0.4s ease-in-out;
+                border-radius: 10px;
+                color:  #36454A;
+                background: -webkit-linear-gradient(top, #A4D3E0 , #A4D3E0 50%, #CBE3EB 50%);
+                background: -o-linear-gradient(top, #A4D3E0 , #A4D3E0 50%, #CBE3EB 50%);
+                background: linear-gradient(to top, #A4D3E0 , #A4D3E0 50%, #CBE3EB 50%);
+                box-shadow: 2px 2px 3px black;
+        }
+            .articles_link a:hover{
+                background: -webkit-linear-gradient(bottom, #A4D3E0 , #A4D3E0 50%, #CBE3EB 50%);
+                background: -o-linear-gradient(bottom, #A4D3E0 , #A4D3E0 50%, #CBE3EB 50%);
+                background: linear-gradient(to bottom, #A4D3E0 , #A4D3E0 50%, #CBE3EB 50%);
+            }
+.articles_content{
+    text-align: center;
+}
+
+.Content_article p{
+    background-color: white;
+
+}
+.Article_main_text {
+background-color: rgb(192, 52, 52);
+}
+.game
+{
+    
 }

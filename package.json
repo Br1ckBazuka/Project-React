@@ -29,13 +29,22 @@
     "reactsample"
   ],
   "dependencies": {
+    "bootstrap": "^4.5.3",
+    "classnames": "^2.2.6",
     "compression": "^1.7.0",
+    "cosmicjs": "^3.3.2",
     "express": "^4.15.4",
+    "moment": "^2.29.1",
     "morgan": "^1.8.2",
-    "react": "^15.6.1",
-    "react-dom": "^15.6.1",
+    "react": "^17.0.1",
+    "react-bootstrap": "^1.4.0",
+    "react-dom": "^17.0.1",
+    "react-moment": "^1.0.0",
+    "react-render-html": "^0.6.0",
     "react-router-dom": "^4.3.1",
-    "react-scripts": "1.1.5"
+    "react-scripts": "1.1.5",
+    "react-simple-snake": "^0.2.2",
+    "render-html": "^1.2.1"
   },
   "scripts": {
     "start": "set NODE_ENV=development && react-scripts start",
