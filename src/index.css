@@ -58,12 +58,12 @@ ul.header {
 
 .articles_link {
     background-color: aqua;
-    width: 1060px;
+    width: 1480px;
 }
     .articles_link li
     {
         list-style-type: none;
-        height: 83px;
+        height: 84px;
         text-align: center;
     }
         .articles_link a {
