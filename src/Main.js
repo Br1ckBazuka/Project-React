@@ -3,7 +3,8 @@ import {Route, NavLink, HashRouter} from 'react-router-dom'
 import Home from './Home';
 import Game from './Game';
 import Tests from './Tests';
-import Article from './Article';
+import Articles from './Articles';
+import ArticleComponent from "./articlecomponent";
 import './index.css';
 
 class Main extends Component {
@@ -14,15 +15,16 @@ class Main extends Component {
                     <h1>React-project</h1>
                     <ul className="header">
                         <li><NavLink exact to="/">Главная</NavLink></li>
-                        <li><NavLink to="/Game">Игра</NavLink></li>
-                        <li><NavLink exact to="/Article">Статьи</NavLink></li> 
-                        <li><NavLink to="/Tests">Тесты</NavLink></li>
+                        <li><NavLink to="/game">Игра</NavLink></li>
+                        <li><NavLink exact to="/articles">Статьи</NavLink></li> 
+                        <li><NavLink to="/tests">Тесты</NavLink></li>
                     </ul>
                     <div className="content">
                         <Route exact path="/" component={Home} />
-                        <Route path="/Game" component={Game} />
-                        <Route path="/Article" component={Article} />
-                        <Route path="/Tests" component={Tests} />
+                        <Route path="/game" component={Game} />
+                        <Route path="/articles" component={Articles} />
+                        <Route path="/tests" component={Tests} />
+                        <Route path="/articlecomponent/:id" component={ArticleComponent} />
                     </div>
                 </div>
             </HashRouter>

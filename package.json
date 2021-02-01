@@ -32,7 +32,7 @@
     "bootstrap": "^4.5.3",
     "classnames": "^2.2.6",
     "compression": "^1.7.0",
-    "cosmicjs": "^3.3.2",
+    "cosmicjs": "^3.4.0",
     "express": "^4.15.4",
     "moment": "^2.29.1",
     "morgan": "^1.8.2",

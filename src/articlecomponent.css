@@ -1,0 +1,116 @@
+.article_component {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	flex-direction: column;
+}
+
+.article_header {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100px;
+}
+
+.article_header_left, .article_header_center, .article_header_right {
+	margin: 20px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	width: 33%;
+	height: 100%;
+}
+
+.article_header_left {
+	align-items: flex-start;
+}
+
+.article_header_center {
+	align-items: center;
+}
+
+.article_header_right {
+	align-items: flex-end;
+}
+
+.article_header_right > span, .article_header_center > span {
+	font-size: 16pt;
+}
+
+.author {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.author_image {
+	width: 48px;
+	height: 48px;
+	overflow: hidden;
+	background-repeat: no-repeat;
+}
+
+.author > span {
+	font-size: 16pt;
+}
+
+.article_content {
+	margin: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.article_content {
+	font-size: 14pt;
+}
+
+.article_footer {
+	margin: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 100%;
+}
+
+.article_footer > button {
+	width: 200px;
+	height: 50px;
+	font-size: 16pt;
+}
+
+.articles_style {
+	text-decoration: none;
+	display: inline-block;
+	margin: 10px 20px;
+	padding: 15px 30px;
+	overflow: hidden;
+	border: 2px solid;
+	border-bottom-width: 4px;
+	font-family: 'Montserrat', sans-serif;
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	color: rgba(30, 255, 188, 1);
+	background: rgba(255, 255, 255, 1);
+	transition: color .3s, background .5s;
+  }
+  .articles_style:hover {
+	animation: stripes .75s infinite linear;
+	background: linear-gradient(45deg, rgba(30, 255, 188, 1) 25%, rgba(255, 255, 255, 1) 25%, rgba(255, 255, 255, 1) 50%, rgba(30, 255, 188, 1) 50%, rgba(30, 255, 188, 1) 75%, rgba(255, 255, 255, 1) 75%, rgba(255, 255, 255, 1));
+	background-size: 10px 10px;
+	color: #FF50E5;
+  }
+  @keyframes stripes {
+	0% {
+	  background-position: 0 0;
+	}
+	100% {
+	  background-position: 50px 0;
+	}
+  }
