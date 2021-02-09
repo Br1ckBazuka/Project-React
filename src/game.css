@@ -1,0 +1,119 @@
+button
+{
+  width: 60px;
+  height: 60px;
+  background-color: #C4C4C4;
+  border: none;
+  transition: all 0.3s;
+}
+
+button:hover
+{
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #999999;
+}
+
+button:focus
+{
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.game
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.notification
+{
+  background-color: black; 
+  width: 450px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper_space
+{
+  background-color: black;
+  width: 450px;
+  height: 450px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrapper_space > p {
+    width: 60px;
+  height: 60px;
+  display: flex;
+  background-color: #C4C4C4;
+	font-family: Helvetica;
+  color: black;
+  font-size: 12pt;
+  align-items: center;
+  font-weight: 600;
+
+}
+
+.line_one
+{
+  margin-top: 35px;
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  height: 60px;
+}
+
+.line_two
+{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  height: 60px;
+}
+
+.line_three
+{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  height: 60px;
+}
+
+.line_four
+{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  height: 60px;
+}
+
+.line_five
+{
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-around;
+  width: 400px;
+  height: 60px;
+}
+
+
+
+#notification_text
+{
+  color: yellow;
+  font-size: 14pt;
+  font-family: Helvetica;
+}

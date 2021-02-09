@@ -1,15 +1,17 @@
-import React, {Component} from 'react';
-import Snake from 'react-simple-snake'
-import './index.css';
+import  React, {Component} from "react";
+import './game.css';
+import Board from './components/board/board'
+
 
 class Game extends Component {
-    render() {
-        return (
-            <div className="game">
-                <Snake/>
-            </div>
-        );
-    }
+	
+	render() {
+    return (
+        <Board>
+
+        </Board>
+    );
+  }
 }
 
 export default Game;
