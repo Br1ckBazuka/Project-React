@@ -47,7 +47,7 @@ class Board extends Component {
         if (1<= a && a <=33)
         {
             document.getElementById("notification_text").innerHTML="Вы выиграли";
-            
+            e.target.innerHTML ="W";
             
 
         }
@@ -55,12 +55,12 @@ class Board extends Component {
         else if (34<= a &&  a<= 66)
         {
             document.getElementById("notification_text").innerHTML="Вы получили подарок";
-            
+            e.target.innerHTML ="D";
         }
         else
         {
             document.getElementById("notification_text").innerHTML="Вы проиграли" 
-            
+            e.target.innerHTML ="L";
         }
     
     }
