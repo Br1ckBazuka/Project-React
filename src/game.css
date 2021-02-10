@@ -117,3 +117,15 @@ button:focus
   font-size: 14pt;
   font-family: Helvetica;
 }
+.life
+{
+  background-image: url(./img/game/life.png)
+}
+.gift
+{
+  background-image: url(./img/game/gift.png)
+}
+.fail
+{
+  background-image: url(./img/game/fail.png)
+}
