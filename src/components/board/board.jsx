@@ -4,7 +4,7 @@ class Board extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-            lives: 3,
+            
 		};
 		this.handleClick = this.handleClick.bind(this);
 	}
@@ -13,23 +13,29 @@ class Board extends Component {
     
     handleClick = (e) => 
     {
-    //    e.target.innerHTML ="";
-    //    document.getElementById("notification_text").innerHTML="Кнопка нажата"+e.target.innerHTML;
-        e.target.innerHTML ="" + Math.floor(Math.random() * 100);
-        if ( 1<= Math.floor(Math.random() * 100) <=33) 
+    // //    e.target.innerHTML ="";
+    // //    document.getElementById("notification_text").innerHTML="Кнопка нажата"+e.target.innerHTML;
+    var N = 100; 
+    Array.apply(null, {length: N}).map(Number.call, Number)
+    var a = Math.floor(Math.random() * N);
+    
+
+        e.target.innerHTML ="" + Math.floor(Math.random() * N);
+        if (1<= a & a <=33)
         {
-            document.getElementById("notification_text").innerHTML="Вы выиграли" 
+            document.getElementById("notification_text").innerHTML="Вы выиграли"  
         }
-        else if (34<= Math.floor(Math.random() * 100) <= 66)
+        
+        else if (34<= a &&  a<= 66)
         {
-            (document.getElementById("notification_text").innerHTML="Вы получили подарок" )
+            document.getElementById("notification_text").innerHTML="Вы получили подарок" 
         }
-        else (67<= Math.floor(Math.random() * 100) <= 99)
+        else
         {
             (document.getElementById("notification_text").innerHTML="Вы проиграли" )
         }
 
-        
+
 
    }
 	
