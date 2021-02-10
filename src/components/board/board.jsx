@@ -42,8 +42,6 @@ class Board extends Component {
     Array.apply(null, {length: N}).map(Number.call, Number)
     const a = Math.floor(Math.random() * N);
     
-    
-        e.target.innerHTML ="";
         if (1<= a && a <=33)
         {
             document.getElementById("notification_text").innerHTML="Вы выиграли";
