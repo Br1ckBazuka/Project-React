@@ -30,7 +30,7 @@ class Board extends Component {
         text.innerHTML = "Жизни закончились";
         return false;
      }
-    else{
+    
             if (1<= a && a <=33)
             {
             }
@@ -58,7 +58,7 @@ class Board extends Component {
 
          }, delay);
     
-         } 
+         
  }   
 	render() {
     return (
