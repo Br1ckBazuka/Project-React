@@ -9,6 +9,7 @@ class Board extends Component {
 		
 		this.handleClick = this.handleClick.bind(this);
 	}
+    
 
    handleClick = (e) => 
     {
@@ -30,19 +31,12 @@ class Board extends Component {
         text.innerHTML = "Жизни закончились";
         return false;
      }
+
+    if (34<= a && a<= 99)
+            {
+                this.numberAttempts--;
+            }
     
-            if (1<= a && a <=33)
-            {
-            }
-            else if (34<= a &&  a<= 66)
-            {
-                this.numberAttempts--;
-            }
-            else
-            {
-                this.numberAttempts--;
-            }
-            
         setTimeout(() => {
             if(1<= a && a <=33){
                text.innerHTML = "Вы выиграли попробуйте еще раз";
@@ -58,7 +52,7 @@ class Board extends Component {
 
          }, delay);
     
-         
+        
  }   
 	render() {
     return (
