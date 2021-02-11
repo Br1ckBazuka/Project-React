@@ -7,7 +7,6 @@ class Game extends Component {
 	
 	render() {
     return (
-     
         <Board/>
     );
   }
