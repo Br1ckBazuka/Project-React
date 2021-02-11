@@ -1,73 +1,75 @@
 import React, {Component} from 'react';
-// import classNames from 'classnames';
-// const Image = ({src,alt,className,}) => 
-//     {
-//         const classes = classNames(
-//             className,
-//             );
-    
-// return (
-//     <img 
-//     src={src}
-//     alt={alt}
-//     className={classes}
-//      />
-// );
-//     }
 
 class Board extends Component {
     
     
 	constructor(props) {
 		super(props);
-		this.state = {
-        
-		};
+		this.numberAttempts = 3
+		
 		this.handleClick = this.handleClick.bind(this);
 	}
-  
-    
-    
-    handleClick = (e) => 
+
+   handleClick = (e) => 
     {
 
-
-        
     // //    e.target.innerHTML ="";
     // //    document.getElementById("notification_text").innerHTML="Кнопка нажата"+e.target.innerHTML;
     // //  document.getElementById("A1").style.backgroundImage = 'url(../../img/game/life.png)';
-    // var elem = document.querySelector(".life")
+   
     
     var N = 100; 
     Array.apply(null, {length: N}).map(Number.call, Number)
     const a = Math.floor(Math.random() * N);
-    
-        if (1<= a && a <=33)
-        {
-            document.getElementById("notification_text").innerHTML="Вы выиграли";
-            e.target.innerHTML ="W";
+    var delay = 5000;
+    var attempts = document.getElementById("attempts");
+    var text = document.getElementById("notification_text");
+    text.innerHTML = "Открывается ячейка "  + e.target.innerHTML + " подождите " + delay/1000 + " секунд "; 
+    if (this.numberAttempts === 0)
+    {
+        text.innerHTML = "Жизни закончились";
+        return false;
+     }
+    else{
+            if (1<= a && a <=33)
+            {
+            }
+            else if (34<= a &&  a<= 66)
+            {
+                this.numberAttempts--;
+            }
+            else
+            {
+                this.numberAttempts--;
+            }
+            
+        setTimeout(() => {
+            if(1<= a && a <=33){
+               text.innerHTML = "Вы выиграли попробуйте еще раз";
+            }
+            else if(34<= a &&  a<= 66){
+               text.innerHTML = "Вы получите случайный подарок";
+            }
+            else{
+               text.innerHTML = "Вы проиграли";
+            }
+            attempts.innerHTML = "Попытки: " + this.numberAttempts;
             
 
-        }
-        
-        else if (34<= a &&  a<= 66)
-        {
-            document.getElementById("notification_text").innerHTML="Вы получили подарок";
-            e.target.innerHTML ="D";
-        }
-        else
-        {
-            document.getElementById("notification_text").innerHTML="Вы проиграли" 
-            e.target.innerHTML ="L";
-        }
+         }, delay);
     
-    }
-	
-    
+         } 
+ }   
 	render() {
     return (
         <div className="game">
-                <div className="notification"><p id="notification_text"></p></div>
+                <div className="notification">
+                   
+                    <p id="notification_text">Выберите ячейку</p>
+                    
+                   
+                <p id="attempts">Попытки: {this.numberAttempts}</p>
+                </div>
                     <div className="wrapper_space" id="wrapper_space">
                         <div className="line_one">
                             <div id="div_button" class=""><button onClick={this.handleClick}><h3 id="A1">A1</h3></button></div>

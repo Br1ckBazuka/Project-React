@@ -35,8 +35,7 @@ button:focus
 {
   background-color: black; 
   width: 450px;
-  height: 80px;
-  display: flex;
+  height: 150px;
   align-items: center;
   justify-content: center;
 }
@@ -60,7 +59,7 @@ button:focus
   color: black;
   font-size: 12pt;
   align-items: center;
-  font-weight: 600;
+  
 
 }
 
@@ -111,11 +110,10 @@ button:focus
 
 
 
-#notification_text
+.notification
 {
-  color: yellow;
-  font-size: 14pt;
-  font-family: Helvetica;
+  color: rgba(233, 14, 14, 0.788);
+  font-size: 16pt;
 }
 .life
 {
