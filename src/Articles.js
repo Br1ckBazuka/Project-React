@@ -26,6 +26,7 @@ class Articles extends Component {
         });
     }
     
+    
     componentDidMount() {
       const fetchUrls = async () => {
         await this.postQuery('http://wp.ru/wp-json/wp/v2/posts').then(response => {
