@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import '../../game.css'
+
 class Board extends Component {
     
     
