@@ -5,6 +5,7 @@ class Board extends Component {
     
 	constructor(props) {
 		super(props);
+        this.timerActive="";
 		this.numberAttempts = 3;
         this.boxClass =[
           "",
@@ -43,10 +44,6 @@ class Board extends Component {
    handleClick = (e) => 
     {
 
-    // //    e.target.innerHTML ="";
-    // //    document.getElementById("notification_text").innerHTML="Кнопка нажата"+e.target.innerHTML;
-    // //  document.getElementById("A1").style.backgroundImage = 'url(../../img/game/life.png)';
-   
     console.log(e.target.dataset.id);
     var N = 100; 
     Array.apply(null, {length: N}).map(Number.call, Number)
@@ -56,16 +53,8 @@ class Board extends Component {
     var text = document.getElementById("notification_text");
     text.innerHTML = "Открывается ячейка подождите " + delay/1000 + " секунд ";
     let keyId = e.currentTarget.dataset.id;
+    console.log(this.timerActive)
 
-    // var btn = document.getElementById("btn");
-    // if (e.target=true)
-    // {
-    //     btn.disabled = true;
-    // }
-    // else{
-    //     btn.disabled = false;
-    // }
-    
     if (this.numberAttempts <= 0)
     {
         text.innerHTML = "Жизни закончились";
@@ -78,6 +67,7 @@ class Board extends Component {
             if(1<= a && a <=33){
                text.innerHTML = "Вы выиграли попробуйте еще раз";
                this.boxClass[keyId]="win";
+               
             }
             else if(34<= a &&  a<= 66){
                text.innerHTML = "Вы получите случайный подарок";
