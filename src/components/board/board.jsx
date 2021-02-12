@@ -25,7 +25,7 @@ class Board extends Component {
     var delay = 5000;
     var attempts = document.getElementById("attempts");
     var text = document.getElementById("notification_text");
-    text.innerHTML = "Открывается ячейка "   + " подождите " + delay/1000 + " секунд "; 
+    text.innerHTML = "Открывается ячейка подождите " + delay/1000 + " секунд "; 
     if (this.numberAttempts === 0)
     {
         text.innerHTML = "Жизни закончились";
