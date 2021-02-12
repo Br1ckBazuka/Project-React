@@ -31,12 +31,6 @@ class Board extends Component {
         text.innerHTML = "Жизни закончились";
         return false;
      }
-
-    if (34<= a && a<= 99)
-            {
-                this.numberAttempts--;
-            }
-    
         setTimeout(() => {
             if(1<= a && a <=33){
                text.innerHTML = "Вы выиграли попробуйте еще раз";
@@ -45,10 +39,12 @@ class Board extends Component {
             else if(34<= a &&  a<= 66){
                text.innerHTML = "Вы получите случайный подарок";
                e.target.innerHTML ="D"
+               this.numberAttempts--;
             }
             else{
                text.innerHTML = "Вы проиграли";
                e.target.innerHTML ="L"
+               this.numberAttempts--;
             }
             attempts.innerHTML = "Попытки: " + this.numberAttempts;
             
