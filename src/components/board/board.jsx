@@ -108,7 +108,7 @@ class Board extends Component {
                 </div>
                     <div className="wrapper_space" id="wrapper_space">
                         <div className="line_one">
-                            <div><button data-id="0" id="btn"  className={this.boxClass["0"]} onClick={this.handleClick}><h3>A1</h3></button></div>
+                            <div><button data-id="0" id="btn"  className={this.boxClass[0]} onClick={this.handleClick}><h3>A1</h3></button></div>
                             <div><button data-id="1" id="btn"  className={this.boxClass[1]} onClick={this.handleClick}><h3>A2</h3></button></div>
                             <div><button data-id="2" id="btn"  className={this.boxClass[2]} onClick={this.handleClick}><h3>A3</h3></button></div>
                             <div><button data-id="3" id="btn"  className={this.boxClass[3]} onClick={this.handleClick}><h3>A4</h3></button></div>
