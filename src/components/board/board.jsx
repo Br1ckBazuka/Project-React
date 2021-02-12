@@ -25,7 +25,7 @@ class Board extends Component {
     var delay = 5000;
     var attempts = document.getElementById("attempts");
     var text = document.getElementById("notification_text");
-    text.innerHTML = "Открывается ячейка "  + e.target.innerHTML + " подождите " + delay/1000 + " секунд "; 
+    text.innerHTML = "Открывается ячейка "   + " подождите " + delay/1000 + " секунд "; 
     if (this.numberAttempts === 0)
     {
         text.innerHTML = "Жизни закончились";
@@ -40,12 +40,15 @@ class Board extends Component {
         setTimeout(() => {
             if(1<= a && a <=33){
                text.innerHTML = "Вы выиграли попробуйте еще раз";
+               e.target.innerHTML ="W"
             }
             else if(34<= a &&  a<= 66){
                text.innerHTML = "Вы получите случайный подарок";
+               e.target.innerHTML ="D"
             }
             else{
                text.innerHTML = "Вы проиграли";
+               e.target.innerHTML ="L"
             }
             attempts.innerHTML = "Попытки: " + this.numberAttempts;
             
