@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import '../../game.css'
 class Board extends Component {
     
     
@@ -7,7 +7,7 @@ class Board extends Component {
 		super(props);
 		this.numberAttempts = 3;
         this.boxClass =[
-          "0",
+          "",
           "",
           "",
           "",
@@ -53,7 +53,7 @@ class Board extends Component {
     var attempts = document.getElementById("attempts");
     var text = document.getElementById("notification_text");
     text.innerHTML = "Открывается ячейка подождите " + delay/1000 + " секунд ";
-    var keyId = e.currentTarget.dataset.id;
+    let keyId = e.currentTarget.dataset.id;
 
     // var btn = document.getElementById("btn");
     // if (e.target=true)
@@ -108,7 +108,7 @@ class Board extends Component {
                 </div>
                     <div className="wrapper_space" id="wrapper_space">
                         <div className="line_one">
-                            <div><button data-id="0" id="btn"  className={this.boxClass[0]} onClick={this.handleClick}><h3>A1</h3></button></div>
+                            <div><button data-id="0" id="btn"  className={this.boxClass["0"]} onClick={this.handleClick}><h3>A1</h3></button></div>
                             <div><button data-id="1" id="btn"  className={this.boxClass[1]} onClick={this.handleClick}><h3>A2</h3></button></div>
                             <div><button data-id="2" id="btn"  className={this.boxClass[2]} onClick={this.handleClick}><h3>A3</h3></button></div>
                             <div><button data-id="3" id="btn"  className={this.boxClass[3]} onClick={this.handleClick}><h3>A4</h3></button></div>
