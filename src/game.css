@@ -117,17 +117,17 @@ button:focus
 }
 .win
 {
-  background-image: url(./img/game/win.png)!important;
-  background-size: contain!important;
+  background-image: url(./img/game/win.png);
+  background-size: contain;
 
 }
 .draw
 {
-  background-image: url(./img/game/draw.png)!important;
-  background-size: contain!important;
+  background-image: url(./img/game/draw.png);
+  background-size: contain;
 }
 .fail
 {
-  background-image: url(./img/game/lose.png)!important;
-  background-size: contain!important;
+  background-image: url(./img/game/lose.png);
+  background-size: contain;
 }
