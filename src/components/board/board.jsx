@@ -7,7 +7,7 @@ class Board extends Component {
 		super(props);
 		this.numberAttempts = 3;
         this.boxClass ={
-          "0",
+          "",
           "",
           "",
           "",
