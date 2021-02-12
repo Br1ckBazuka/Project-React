@@ -115,15 +115,19 @@ button:focus
   color: rgba(233, 14, 14, 0.788);
   font-size: 16pt;
 }
-.life
+.win
 {
-  background-image: url(./img/game/life.png)
+  background-image: url(./img/game/win.png)!important;
+  background-size: contain!important;
+
 }
-.gift
+.draw
 {
-  background-image: url(./img/game/gift.png)
+  background-image: url(./img/game/draw.png)!important;
+  background-size: contain!important;
 }
 .fail
 {
-  background-image: url(./img/game/fail.png)
+  background-image: url(./img/game/lose.png)!important;
+  background-size: contain!important;
 }
