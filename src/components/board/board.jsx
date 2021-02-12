@@ -45,7 +45,7 @@ class Board extends Component {
     // //    document.getElementById("notification_text").innerHTML="Кнопка нажата"+e.target.innerHTML;
     // //  document.getElementById("A1").style.backgroundImage = 'url(../../img/game/life.png)';
    
-    
+    console.log(e.target.dataset.id);
     var N = 100; 
     Array.apply(null, {length: N}).map(Number.call, Number)
     const a = Math.floor(Math.random() * N);
@@ -53,10 +53,9 @@ class Board extends Component {
     var attempts = document.getElementById("attempts");
     var text = document.getElementById("notification_text");
     text.innerHTML = "Открывается ячейка подождите " + delay/1000 + " секунд ";
-    console.log(e.target.dataset.id);
-    var keyId = e.target.dataset.id;
-    // var btn = document.getElementById("btn");
+    var keyId = e.currentTarget.dataset.id;
 
+    // var btn = document.getElementById("btn");
     // if (e.target=true)
     // {
     //     btn.disabled = true;
