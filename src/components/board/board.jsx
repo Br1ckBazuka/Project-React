@@ -33,7 +33,9 @@ class Board extends Component {
           "",
           "", 
         ];
-		
+		this.state= {
+            boxClass: this.boxClass
+        }    
 		this.handleClick = this.handleClick.bind(this);
 	}
     
@@ -89,6 +91,7 @@ class Board extends Component {
             }
             
             attempts.innerHTML = "Попытки: " + this.numberAttempts;
+            this.setState({boxClass:this.boxClass})
             // btn.disabled = false;
 
          }, delay);
