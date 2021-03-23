@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-
+import queryString from 'query-string';
 class Board extends Component {
     
     
@@ -7,6 +7,7 @@ class Board extends Component {
 		super(props);
         this.timerActive="";
 		this.numberAttempts = 3;
+        this.urlClick ='http://wp.ru/wp-json/myapi/v1/game/Mines/'
         this.boxClass =[
           "",
           "",
@@ -43,7 +44,20 @@ class Board extends Component {
 
    handleClick = (e) => 
     {
+        fetch(this.urlClick, {
+            method: 'POST',
+            headers: {'Content-Type':'application/x-www-form-urlencoded'}, // this line is important, if this content-type is not set it wont work
+            body: queryString.stringify({for:'bar', blah:1}) //use the stringify object of the queryString class
+        }).then((responseData) => { console.warn(responseData); return responseData; });
 
+        // fetch(this.urlClick, {
+        //         method: 'POST',
+        //          headers: {'Content-Type':'application/x-www-form-urlencoded'}, // this line is important, if this content-type is not set it wont work
+        //          body: queryString.stringify({for:'bar', blah:1}) //use the stringify object of the queryString class
+        //      }).then((response) => {return response.json();}).then((data) => {console.log(data);});
+        
+
+        
     console.log(e.target.dataset.id);
     var N = 100; 
     Array.apply(null, {length: N}).map(Number.call, Number)
@@ -82,13 +96,13 @@ class Board extends Component {
             
             attempts.innerHTML = "Попытки: " + this.numberAttempts;
             this.setState({boxClass:this.boxClass})
-            // btn.disabled = false;
-
+            
          }, delay);
     }
     
 
- }   
+ }
+    
 	render() {
     return (
         <div className="game">
