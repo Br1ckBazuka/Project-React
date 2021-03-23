@@ -7,7 +7,7 @@ class Board extends Component {
 		super(props);
         this.timerActive="";
 		this.numberAttempts = 3;
-        this.urlClick ='http://wp.ru/wp-json/myapi/v1/game/Mines/'
+        this.urlClick ="http://wp.ru/wp-json/myapi/v1/game/Mines/";
         this.boxClass =[
           "",
           "",
