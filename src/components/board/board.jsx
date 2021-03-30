@@ -40,67 +40,68 @@ class Board extends Component {
         }    
 		this.handleClick = this.handleClick.bind(this);
 	}
-    
+   
 
-   handleClick = (e) => 
+    handleClick = (e) => 
     {
-        fetch(this.urlClick, {
+        
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+          }
+          
+       let user_id = getRandomInt(100000000,200000000)
+       let number_cell = e.target.dataset.id;
+        
+
+        fetch(this.urlClick,{
             method: 'POST',
             headers: {'Content-Type':'application/x-www-form-urlencoded'}, // this line is important, if this content-type is not set it wont work
-            body: queryString.stringify({for:'bar', blah:1}) //use the stringify object of the queryString class
-        }).then((responseData) => { console.warn(responseData); return responseData; });
-
-        // fetch(this.urlClick, {
-        //         method: 'POST',
-        //          headers: {'Content-Type':'application/x-www-form-urlencoded'}, // this line is important, if this content-type is not set it wont work
-        //          body: queryString.stringify({for:'bar', blah:1}) //use the stringify object of the queryString class
-        //      }).then((response) => {return response.json();}).then((data) => {console.log(data);});
+            body: queryString.stringify({user_id:user_id, cell_number:number_cell}) //use the stringify object of the queryString class
+        }).then(function (response) {
+            return response.json()
+          })
+          .then(function (data) {
+            console.log('data', data)
+          })
         
+        // then((responseData) => { 
+        //     //Тело функции
+        //     //В этой функции мы получаем результат действия(проиграл, выиграл, ничья) и относительно этого результата выводим пользователю информацию.
+        //         //Тут будет подобная реализация setTimeout, но условия уже будут попроще, так как результат приходит в виде числа: 1, 2, 3
+        //     console.warn(responseData); return responseData; 
+        //     //Конец тела функции
+        //     })
+            
 
         
     console.log(e.target.dataset.id);
-    var N = 100; 
-    Array.apply(null, {length: N}).map(Number.call, Number)
-    const a = Math.floor(Math.random() * N);
-    var delay = 5000;
     var attempts = document.getElementById("attempts");
     var text = document.getElementById("notification_text");
-    text.innerHTML = "Открывается ячейка подождите " + delay/1000 + " секунд ";
-    let keyId = e.currentTarget.dataset.id;
+    text.innerHTML = "Открывается ячейка подождите несколько секунд ";
+    
     console.log(this.timerActive)
 
     if (this.numberAttempts <= 0)
     {
         text.innerHTML = "Жизни закончились";
         return false;
+        
+        // text.innerHTML = "Вы выиграли попробуйте еще раз";
+        //    this.boxClass[keyId]="win";
+
+        // text.innerHTML = "Вы получите случайный подарок";
+        //        this.boxClass[keyId]="draw"
+        //        this.numberAttempts--;
+
+
+        // text.innerHTML = "Вы проиграли";
+        // this.boxClass[keyId]="fail"
+        // this.numberAttempts--;
      }
-     else {
-
-     
-        setTimeout(() => {
-            if(1<= a && a <=33){
-               text.innerHTML = "Вы выиграли попробуйте еще раз";
-               this.boxClass[keyId]="win";
-               
-            }
-            else if(34<= a &&  a<= 66){
-               text.innerHTML = "Вы получите случайный подарок";
-               this.boxClass[keyId]="draw"
-               this.numberAttempts--;
-            }
-            else{
-               text.innerHTML = "Вы проиграли";
-               this.boxClass[keyId]="fail"
-               this.numberAttempts--;
-            }
-            
-            attempts.innerHTML = "Попытки: " + this.numberAttempts;
+     attempts.innerHTML = "Попытки: " + this.numberAttempts;
             this.setState({boxClass:this.boxClass})
-            
-         }, delay);
-    }
-    
-
+       
  }
     
 	render() {
